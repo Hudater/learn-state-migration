@@ -4,13 +4,13 @@
 ## Terraform configuration
 
 terraform {
-  cloud {
-    hostname     = "app.terraform.io"
-    organization = "homelab_hudater"
-    workspaces {
-      name = "learn-terraform-migrate"
-    }
-  }
+  # cloud {
+  #   hostname     = "app.terraform.io"
+  #   organization = "homelab_hudater"
+  #   workspaces {
+  #     name = "learn-terraform-migrate"
+  #   }
+  # }
   required_providers {
     random = {
       source  = "hashicorp/random"
