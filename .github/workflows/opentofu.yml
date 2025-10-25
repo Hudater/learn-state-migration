@@ -5,9 +5,9 @@ on:
     branches: [ "main" ]
   pull_request:
 
-defaults:
-  run:
-    working-directory: opentofu
+# defaults:
+#   run:
+#     working-directory: opentofu
 # defaults:
 #   run:
 #     working-directory: ${{ env.tf_actions_working_dir }}
@@ -50,6 +50,10 @@ jobs:
       id: plan
       run: tofu plan -no-color
       continue-on-error: true
+
+    - name: OpenTofu Apply
+      if: github.ref == 'refs/heads/"main"' && github.event_name == 'push'
+      run: tofu apply -auto-approve -input=false
 
     - uses: actions/github-script@v6
       if: github.event_name == 'pull_request'
@@ -108,6 +112,3 @@ jobs:
               body: output
             })
           }
-    - name: OpenTofu Apply
-      if: github.ref == 'refs/heads/"main"' && github.event_name == 'push'
-      run: tofu apply -auto-approve -input=false
