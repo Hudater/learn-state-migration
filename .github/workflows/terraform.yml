@@ -53,6 +53,9 @@ permissions:
   contents: read
 
 jobs:
+  env:
+      TF_API_TOKEN: ${{ secrets.TF_API_TOKEN }}
+
   terraform:
     name: 'Terraform'
     runs-on: ubuntu-latest
