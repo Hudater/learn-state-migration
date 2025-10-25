@@ -5,12 +5,12 @@ on:
     branches: [ "main" ]
   pull_request:
 
-# defaults:
-#   run:
-#     working-directory: opentofu
 defaults:
   run:
-    working-directory: ${{ env.tf_actions_working_dir }}
+    working-directory: opentofu
+# defaults:
+#   run:
+#     working-directory: ${{ env.tf_actions_working_dir }}
 
 permissions:
   pull-requests: write
