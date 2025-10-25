@@ -53,15 +53,12 @@ permissions:
   contents: read
 
 jobs:
-  env:
-      TF_API_TOKEN: ${{ secrets.TF_API_TOKEN }}
-
   terraform:
     name: 'Terraform'
     runs-on: ubuntu-latest
     environment: production
-
-    # Use the Bash shell regardless whether the GitHub Actions runner is ubuntu-latest, macos-latest, or windows-latest
+    env:
+      TF_API_TOKEN: ${{ secrets.TF_API_TOKEN }}
     defaults:
       run:
         shell: bash
