@@ -8,6 +8,9 @@ on:
 # defaults:
 #   run:
 #     working-directory: opentofu
+defaults:
+  run:
+    working-directory: ${{ env.tf_actions_working_dir }}
 
 permissions:
   pull-requests: write
