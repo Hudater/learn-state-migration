@@ -45,6 +45,12 @@ resource "random_pet" "pet_name_4" {
   separator = "_"
 }
 
+resource "random_pet" "pet_name_5" {
+  length    = var.name_length
+  separator = "_"
+}
+
+
 
 output "pet_name" {
   value = random_pet.pet_name.id
