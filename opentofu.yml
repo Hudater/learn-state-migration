@@ -56,6 +56,7 @@ jobs:
       continue-on-error: true
 
     - name: OpenTofu Apply
+      id: apply
       if: github.ref == 'refs/heads/"main"' && github.event_name == 'push'
       run: tofu apply -auto-approve -input=false
 
