@@ -14,6 +14,15 @@ permissions:
 
 jobs:
   opentofu:
+    name: 'OpenTofu'
+    runs-on: ubuntu-latest
+    environment: production
+
+    # Use the Bash shell regardless whether the GitHub Actions runner is ubuntu-latest, macos-latest, or windows-latest
+    defaults:
+      run:
+        shell: bash
+
     steps:
     - uses: actions/checkout@v3
     - uses: opentofu/setup-opentofu@v1
