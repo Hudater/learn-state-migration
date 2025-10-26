@@ -35,6 +35,6 @@ override.tf.json
 *.tfvars
 *.tfvars.json
 
-# Conventionally named variable file
-variable.tofu
-variable.tf
+# # Conventionally named variable file
+# variable.tofu
+# variable.tf
