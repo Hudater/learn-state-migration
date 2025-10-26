@@ -30,10 +30,10 @@ resource "random_pet" "pet_name" {
   separator = "-"
 }
 
-# resource "random_pet" "pet_name_2" {
-#   length    = var.name_length
-#   separator = "_"
-# }
+resource "random_pet" "pet_name_2" {
+  length    = var.name_length
+  separator = "_"
+}
 
 # resource "random_pet" "pet_name_3" {
 #   length    = var.name_length
