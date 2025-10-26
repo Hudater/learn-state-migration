@@ -20,11 +20,6 @@ terraform {
   required_version = ">= 1.1.0"
 }
 
-variable "name_length" {
-  description = "The number of words in the pet name"
-  default     = "3"
-}
-
 resource "random_pet" "pet_name" {
   length    = var.name_length
   separator = "-"
