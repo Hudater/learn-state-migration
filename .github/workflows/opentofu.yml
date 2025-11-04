@@ -44,7 +44,7 @@ jobs:
 
     - name: OpenTofu Init
       id: init
-      run: tofu init
+      run: tofu init -upgrade
 
     - name: OpenTofu Validate
       id: validate
