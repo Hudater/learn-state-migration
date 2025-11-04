@@ -40,12 +40,10 @@ resource "random_pet" "pet_name_4" {
   separator = var.var_one
 }
 
-# resource "random_pet" "pet_name_5" {
-#   length    = var.name_length
-#   separator = "_"
-# }
-
-
+resource "random_pet" "pet_name_5" {
+  length    = var.name_length
+  separator = "_"
+}
 
 output "pet_name" {
   value = random_pet.pet_name.id
