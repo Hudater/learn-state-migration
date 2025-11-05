@@ -5,9 +5,9 @@ on:
     branches: ["main"]
   pull_request:
 
-defaults:
-  run:
-    working-directory: testing_dir
+# defaults:
+#   run:
+#     working-directory: testing_dir
 # defaults:
 #   run:
 #     working-directory: ${{ env.tf_actions_working_dir }}
@@ -25,6 +25,7 @@ jobs:
     defaults:
       run:
         shell: bash
+        working-directory: ./testing_dir
 
     steps:
       # Checkout the repository to the GitHub Actions runner
