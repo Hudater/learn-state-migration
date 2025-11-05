@@ -5,9 +5,9 @@ on:
     branches: [ "main" ]
   pull_request:
 
-# defaults:
-#   run:
-#     working-directory: opentofu
+defaults:
+  run:
+    working-directory: ./testing_dir
 # defaults:
 #   run:
 #     working-directory: ${{ env.tf_actions_working_dir }}
